@@ -21,7 +21,6 @@ public class SearchDriver extends Configured implements Tool {
         Job job = Job.getInstance(conf, "Homework1");
         job.setJarByClass(SearchDriver.class);
         job.setMapperClass(SearchMapper.class);
-        job.setReducerClass(SearchReducer.class);
         // Input
         FileInputFormat.addInputPath(job, new Path(args[0]));
         job.setInputFormatClass(TextInputFormat.class);
